@@ -1,64 +1,68 @@
 # 🚗 Fuel Consumption ML
 
-A machine learning project for analyzing and predicting vehicle fuel consumption using the *Fuel Consumption CO2* dataset.  
+Predicting vehicle fuel consumption using **Linear Regression** and **Polynomial Regression**.
 
-This repository includes data exploration, preprocessing, modeling, and evaluation of regression models to predict fuel consumption based on vehicle properties.
+This project walks through the machine learning workflow: data exploration, preprocessing, model training, evaluation, and interpretation with simple regression models.
 
 ---
 
-## 📁 Project Contents
+## 📁 Repository Structure
 
 | File | Description |
 |------|-------------|
-| `FuelConsumptionCo2.csv` | The raw dataset of vehicle fuel consumption and emissions |
-| `fuel_consumption.ipynb` | Jupyter Notebook with EDA, preprocessing, and modeling code |
-| `README.md` | Project overview and instructions (this file) |
+| `FuelConsumptionCo2.csv` | Original dataset of vehicle fuel consumption and CO₂ emissions |
+| `fuel_consumption.ipynb` | Jupyter Notebook with all code, EDA, preprocessing, modeling, and evaluation |
+| `README.md` | This file |
 
 ---
 
-## 📊 Dataset Overview
+## 📊 About the Dataset
 
-The dataset contains information related to fuel consumption and carbon emissions for various vehicle models, including features such as:
+The dataset includes real vehicle data like:
 
-- Model year  
 - Engine size  
 - Number of cylinders  
+- Transmission type  
 - Fuel consumption (city, highway, combined)  
-- CO2 emissions  
-- Transmission and drive type  
+- CO₂ emissions  
 
-This dataset allows us to explore how different vehicle characteristics affect fuel usage and emissions. :contentReference[oaicite:0]{index=0}
-
----
-
-## 🧠 What You’ll Find Here
-
-This project demonstrates:
-
-1. **Exploratory Data Analysis (EDA)**  
-   - Feature distributions  
-   - Correlation analysis  
-   - Visualizations to understand relationships between variables.
-
-2. **Data Preprocessing**
-   - Handling missing values
-   - Encoding categorical features
-   - Feature scaling (StandardScaler)
-
-3. **Model Training & Evaluation**
-   - Regression modeling for fuel consumption prediction
-   - Model performance metrics such as RMSE and R²
-   - Comparison of different regression models
-
-4. **Insights and Conclusions**
-   - Which features most influence fuel consumption  
-   - Model accuracy and limitations
+We use these features to train regression models to predict **fuel consumption**.
 
 ---
 
-## 🛠 Dependencies
+## 🧠 What This Project Does
 
-Before you run the project, install the required libraries:
+### 1. Exploratory Data Analysis (EDA)
+
+- Visualize distributions of numeric and categorical features  
+- Analyze relationships between features and the target  
+- Heatmap to see correlations
+
+### 2. Data Preprocessing
+
+- Handle missing values (median imputation for numeric)  
+- Encode categorical fields (e.g., transmission, drive)  
+- Scale numeric features (StandardScaler) for models sensitive to feature magnitude
+
+### 3. Model Training
+
+Two regression models are trained and evaluated:
+
+- **Linear Regression**
+- **Polynomial Regression** (with degree > 1 for non‑linear relationships)
+
+### 4. Evaluation
+
+- **RMSE (Root Mean Squared Error)**
+- **R² Score**  
+Both models are compared to see which fits the data better.
+
+---
+
+## 🛠 How to Run
+
+1. **Clone the repository:**
 
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn
+git clone https://github.com/Raya1313/fuel_consumption_ML.git
+cd fuel_consumption_ML
