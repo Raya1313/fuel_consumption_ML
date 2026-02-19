@@ -42,7 +42,7 @@ We use these features to train regression models to predict **fuel consumption**
 
 - Handle missing values (median imputation for numeric)  
 - Encode categorical fields (e.g., transmission, drive)  
-- Scale numeric features (StandardScaler) for models sensitive to feature magnitude
+
 
 ### 3. Model Training
 
